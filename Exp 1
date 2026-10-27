@@ -1,0 +1,19 @@
+Device Selection & Justification
+
+Modem: Translates the external ISP signal into a usable digital format; mandatory for internet access.
+
+Router: Connects directly to the modem to assign IP addresses, manage NAT, and direct traffic between the internal network and the internet.
+
+Switch: Deployed per floor or department. Operates at Layer 2 to route data via MAC addresses directly to the intended device, eliminating collision domains and ensuring dedicated bandwidth.
+
+Repeater: Placed at signal degradation points to amplify and extend network range through heavy factory walls or past the standard 100-meter Ethernet limit.
+
+Hub: Never use this. It is obsolete hardware that blindly broadcasts data to all ports, crippling performance and destroying network security.
+
+Data Flow Mechanics
+
+Internal Traffic: A file sent between departments travels from the PC to the local Switch, then directly to the destination Switch and target PC. The Router is bypassed entirely for local transfers.
+
+External Traffic: Web requests travel from the PC to the Switch, up to the Router for IP translation, out through the Modem, and finally to the ISP.
+
+Edge Connections: A remote machine sends a weak signal to the Repeater, which regenerates the packet at full strength and passes it down the line to the main network.
