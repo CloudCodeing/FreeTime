@@ -1,0 +1,6 @@
+Ping 10.0.1.146
+Tracert 10.0.1.146
+arp -a
+Netstat –n
+nslookup
+ipconfig
